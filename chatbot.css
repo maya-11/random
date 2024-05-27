@@ -1,0 +1,84 @@
+/* Chatbot styles */
+.chat-container {
+    background-color: #004080;
+    /* Slightly lighter blue for chat container */
+    padding: 20px;
+    border-radius: 8px;
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.chat-message.user {
+    justify-content: flex-end;
+}
+
+.chat-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 60%;
+}
+
+.chat-bubble.bot {
+    background-color: #007bff;
+    /* Blue bot message background */
+    color: white;
+}
+
+.chat-bubble.user {
+    background-color: #1a1a1a;
+    /* Dark gray user message background */
+    color: white;
+}
+
+.chat-form {
+    display: flex;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.send-button-container {
+    display: flex;
+    align-items: center;
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* Blue button background */
+    border: none;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    margin-left: -1px;
+    /* Adjusting for the border between buttons */
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+#clear-button {
+    padding: 5px 10px;
+    background-color: white;
+    /* White button background */
+    border: 1px solid #007bff;
+    /* Blue border */
+    color: #007bff;
+    border-radius: 20px;
+    cursor: pointer;
+}

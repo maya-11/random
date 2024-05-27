@@ -1,0 +1,159 @@
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+#search-input {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.closed {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+.navigationPanel {
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #003366;
+    /* Dark blue background */
+    color: #ffffff;
+    /* White text color */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #00509E;
+    /* Darker blue header background */
+    color: #ffffff;
+    /* White header text color */
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li.active a {
+    font-weight: bold;
+}
+
+nav a {
+    color: #ffffff;
+    /* White navigation link color */
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #00509E;
+    /* Darker blue footer background */
+    color: #ffffff;
+    /* White footer text color */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Logout page styles */
+.logout {
+    background-color: #ffffff;
+    /* White background for logout section */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout h2 {
+    color: #00509E;
+    /* Darker blue heading color */
+}
+
+.logout button {
+    background-color: #00509E;
+    /* Darker blue button background */
+    color: #ffffff;
+    /* White button text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout button:hover {
+    background-color: #003366;
+    /* Even darker blue on hover */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    /* White label color */
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00509E;
+    /* Darker blue button background */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366;
+    /* Even darker blue on hover */
+}

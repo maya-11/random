@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bus Driver Tracking App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8KTu1unwDsOmFX__tOwsUPIGZJRIB5dI&libraries=places,geometry&callback=initMap"
+        defer></script>
+</head>
+
+<body>
+    <h3>Bus tracking </h3>
+
+    <div id="navigationContainer" class="closed">
+        <button id="navigationButton">&#9776;</button>
+        <nav class="navigationPanel">
+            <p>General</p>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home page</a></li>
+                <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                <li><a href="trips.html"><i class="fas fa-route"></i> Trips</a></li>
+                <li><a href="buses.html"><i class="fas fa-bus"></i> Buses</a></li>
+            </ul>
+            <ul>
+                <li><a href="chatbot.html"><i class="fas fa-robot"></i> Chatbot</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-md-8'>
+                <noscript>
+                    <div class='alert alert-info'>
+                        <h4>Your JavaScript is disabled</h4>
+                        <p>Please enable JavaScript to view the map.</p>
+                    </div>
+                </noscript>
+                <div id="map"></div>
+            </div>
+            <div class='col-md-4'>
+                <div class='well define_height'>
+                    <form id="distance_form" onsubmit="calculateAndDisplayRoute(); return false;">
+                        <div class="form-group">
+                            <label>Enter Origin</label>
+                            <input class="form-control" id="from_places" placeholder="Enter Origin" />
+                            <input id="origin" name="origin" required="" type="hidden" />
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Destination</label>
+                            <input class="form-control" id="to_places" placeholder="Enter Destination" />
+                            <input id="destination" name="destination" required="" type="hidden" />
+                        </div>
+                        <div class="form-group" id="travelModeDiv">
+                            <label>Travel Mode</label>
+                            <select class="form-control" id="travel_mode" name="travel_mode">
+                                <option value="DRIVING">Driving</option>
+                                <option value="WALKING">Walking</option>
+                                <option value="BICYCLING">Bicycle</option>
+                                <option value="TRANSIT">Transit</option>
+                            </select>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Find" />
+                    </form>
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="container">
+                            <p id="in_mile"></p>
+                            <p id="in_kilo"></p>
+                            <p id="duration_text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

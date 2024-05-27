@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteRover - Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Settings</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="buses.html">Buses</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="settings">
+            <h2>Account Settings</h2>
+            <form id="settingsForm" action="#" method="post">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
+            <div id="message" style="display:none; color: green; margin-top: 10px;">Saved changes</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RouteRover. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('settingsForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            document.getElementById('message').style.display = 'block'; // Display the message
+        });
+    </script>
+</body>
+
+</html>
